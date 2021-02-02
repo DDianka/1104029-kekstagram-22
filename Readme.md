@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Diana Dianka](https://up.htmlacademy.ru/javascript/22/user/1104029).
-* Наставник: `Неизвестно`.
+* Наставник: [Елена Грицук](https://htmlacademy.ru/profile/id199079).
 
 ---
 
