@@ -7,6 +7,7 @@ const getRandomInt = (min, max) => {
 const checkStringLength = (string, maxLength) => {
   return string.length <= maxLength;
 }
+checkStringLength('Hello world', 140);
 
 const getRandomElement = (array) => {
   return array[getRandomInt(0, array.length - 1)];
