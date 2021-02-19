@@ -1,6 +1,8 @@
 const getRandomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
   if (min <= max && min >= 0) {
-    return Math.floor(Math.random(min,max) * (max - min) + min);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   } return alert('Введённые числа не соответствуют требованиям.');
 }
 
@@ -42,14 +44,14 @@ const descriptions = [
   'Какое красивое сегодня небо. Как вам?',
 ];
 
-let lastCommentId = 0;
+let lastCommentId = 1;
 const generateComments = () => {
   const comments = [];
   const commentsAmount = getRandomInt(1, 5);
 
-  for (let i = 1; i <= commentsAmount; ++i) {
+  for (let i = 1; i <= commentsAmount; i++) {
     comments.push({
-      id: ++lastCommentId,
+      id: lastCommentId++,
       avatar: 'img/avatar' + '-' + getRandomInt(1, 6) + '.svg',
       message: getRandomElement(messages),
       name: getRandomElement(names),
@@ -59,10 +61,10 @@ const generateComments = () => {
   return comments;
 }
 
-const generatePhotosArray = () => {
+const generatePhotosArray = (photosAmount = 25) => {
   const photos= [];
 
-  for (let i = 1; i <= 25; i++) {
+  for (let i = 1; i <= photosAmount; i++) {
     photos.push({
       id: i,
       url:'photos/' + i + '.jpg',
