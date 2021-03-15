@@ -55,11 +55,11 @@ const generatePhotosArray = (photosAmount = 25) => {
       url:'photos/' + i + '.jpg',
       description: getRandomElement(descriptions),
       likes: getRandomInt(15,200),
-      comment: generateComments(),
+      comments: generateComments(),
     });
   }
   console.log(photos);
   return photos;
 }
 
-generatePhotosArray();
+export {generatePhotosArray}
