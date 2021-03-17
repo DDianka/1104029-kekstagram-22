@@ -60,5 +60,6 @@ const generatePhotosArray = (photosAmount = 25) => {
   }
   return photos;
 }
+const photos = generatePhotosArray()
 
-export {generatePhotosArray, generateComments}
+export { photos , generateComments}
