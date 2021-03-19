@@ -44,4 +44,3 @@ picturesContainer.addEventListener('click', function (evt) {
   }
 });
 
-export {picturesContainer}

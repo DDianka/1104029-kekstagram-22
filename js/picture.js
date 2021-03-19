@@ -1,10 +1,9 @@
 import { photos } from './data.js';
-import {picturesContainer} from './bigPicture.js';
-
 
 const templateFragment = document.querySelector('#picture').content; // Находим фрагмент с содержимым темплейта
 const template = templateFragment.querySelector('.picture'); // В фрагменте находим нужный элемент
 const fragment = document.createDocumentFragment();
+const picturesContainer = document.querySelector('.pictures');
 
 
 for (let i = 0; i < photos.length; i++) {
