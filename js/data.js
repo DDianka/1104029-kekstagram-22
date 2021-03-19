@@ -58,8 +58,8 @@ const generatePhotosArray = (photosAmount = 25) => {
       comments: generateComments(),
     });
   }
-  console.log(photos);
   return photos;
 }
+const photos = generatePhotosArray()
 
-export {generatePhotosArray}
+export {photos}
