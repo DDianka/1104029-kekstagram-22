@@ -10,6 +10,7 @@ const socialCommentCount = document.querySelector('.social__comment-count');
 const commentsLoader = document.querySelector('.comments-loader');
 const body = document.querySelector('body');
 const picturesContainer = document.querySelector('.pictures');
+const bigPictureCancel = document.querySelector('.big-picture__cancel');
 
 const renderComments = (comments) => {
   const fragment = document.createDocumentFragment();
@@ -44,3 +45,14 @@ picturesContainer.addEventListener('click', function (evt) {
   }
 });
 
+bigPictureCancel.addEventListener('click', function () {
+  bigPicture.classList.add('hidden');
+  body.classList.remove('modal-open');
+});
+
+body.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    bigPicture.classList.add('hidden');
+    body.classList.remove('modal-open');
+  }
+})
